@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Dina-T Glass">
+  <link href="assets/images/logo/logo.png" rel="icon">
+  <title>Dina-T Glass | Home</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700%7cHeebo:400,500,700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <link rel="stylesheet" href="assets/css/libraries.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div><!-- /.preloader -->
+
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header header-layout3">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="home.html">
+            <img src="assets/images/logo/logo.png" class="logo-light" alt="logo">
+            <img src="assets/images/logo/logo.png" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav__item">
+                <a href="home.html" class="nav__item-link active">Home</a>
+              </li><!-- /.nav-item -->
+
+              <li class="nav__item with-dropdown">
+                <a class="dropdown-toggle nav__item-link">Services</a>
+                <i data-toggle="dropdown" class="fa fa-angle-down d-block d-lg-none"></i>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="standard-glass.html" class="nav__item-link">Products</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="laminated-glass.html" class="nav__item-link">Solutions</a></li>
+                  <!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="projects-grid.html" class=" nav__item-link">Projects</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="about-us.html" class="nav__item-link">About Us</a>
+
+              </li><!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+          </div><!-- /.navbar-collapse -->
+          <ul class="header-actions__list list-unstyled d-flex align-items-center mb-0">
+            <li>
+              <a href="contact-us.html" class="btn btn__white header__btn__sm">Contact Us</a>
+            </li>
+            <li>
+              <ul class="social__icons list-unstyled justify-content-end mb-0 ml-20">
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+              </ul>
+            </li>
+          </ul><!-- /.actions__list -->
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    <!-- ============================
+        Slider
+    ============================== -->
+    <section class="slider slider-layout3">
+      <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0" data-slick='{"slidesToShow": 1,"arrows": true,"dots": true,"speed": 700,"fade": true,"cssEase": "linear","autoplay": true,"autoplaySpeed": 3000}'>
+        <div class="slide-item align-v-h bg-overlay">
+          <div class="bg-img"><img src="assets/images/sliders/1.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-8">
+                <div class="slide__content">
+                  <span class="slide__subtitle">A-grade commercial and residential.</span>
+                  <h2 class="slide__title">Unleash your creativity with Premium Glass Solutions!</h2>
+                  <a href="about-us.html" class="btn btn__white">
+                    <i class="icon-arrow-right1"></i><span>About Us!</span>
+                  </a>
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-8 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+        <div class="slide-item align-v-h bg-overlay">
+          <div class="bg-img"><img src="assets/images/sliders/2.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide__content">
+                  <span class="slide__subtitle">A-grade commercial and residential.</span>
+                  <h2 class="slide__title">Pushing The Boundaries Of What’s Possible.</h2>
+                  <a href="projects-grid.html" class="btn btn__white">
+                    <i class="icon-arrow-right1"></i><span>Projects!</span>
+                  </a>
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-8 -->
+            </div><!-- /.col-xl-7 -->
+          </div><!-- /.row -->
+        </div><!-- /.slide-item -->
+      </div><!-- /.carousel -->
+    </section><!-- /.slider -->
+    <style>
+      .slide__content {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+      }
+
+      .slick-active .slide__content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .slider-layout3 {
+        height: 600px;
+        /* Adjust this value as needed */
+        overflow: hidden;
+      }
+
+      .slide-item {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        /* Keeps text vertically centered */
+      }
+
+      .bg-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        /* Keeps image scaled and cropped nicely */
+      }
+    </style>
+
+    <!-- ========================
+      About Layout 3
+    =========================== -->
+    <section class="about-layout3">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6 col-xl-5">
+            <div class="about__img">
+              <img src="assets/images/about/3.jpg" alt="about" class="img-fluid">
+            </div><!-- /.about-img -->
+          </div><!-- /.col-lg-6 -->
+          <div
+            class="col-sm-12 col-md-12 col-lg-7 col-xl-6 offset-xl-1 about-text-wrapper d-flex flex-column align-items-end">
+            <div class="cta-banner__wrapper">
+              <p class="cta-banner__desc">Building bigger, better, faster & stronger products ever!</p>
+              <div class="cta-banner">
+                <h4 class="cta-banner__subtitle ">30+</h4>
+                <h5 class="cta-banner__title ">Years Of Experience!</h5>
+                <a href="#" class="btn btn__primary btn__link"><i class="icon-arrow-right1"></i></a>
+              </div><!-- /.cta-banner -->
+            </div>
+            <div class="about-text"> 
+              <h2>OUR STORY OF INNOVATION AND GROWTH</h2>
+              <p>From Humble Beginnings to
+                Industry Leader.</p>
+              <p>Dina-T Glass, founded by Hajredin Tara in Rahovec, Kosovo, began its journey in the glass industry with
+                humble beginnings in 1980. Specializing in the processing and trade of safety glass. The concept for
+                this business emerged from the early experience of spontaneous glass trading, which eventually led to
+                the establishment of Dina-T Glass as a trusted name in the industry.</p>
+              <a href="about-us.html" class="btn btn__secondary btn__link">
+                <i class="icon-arrow-right1"></i><span>More About Us</span>
+              </a>
+            </div><!-- /heading -->
+          </div><!-- /.col-xl-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.About Layout 3 -->
+
+    <!-- =========================== 
+      portfolio grid 
+      
+    ============================= -->
+
+    <style>
+      @media (min-width: 992px) {
+        .portfolio-item__img img {
+          width: 640px;
+          height: 400px;
+          object-fit: cover;
+          display: block;
+          margin: 0 auto;
+        }
+      }
+    </style>
+
+    <section class="portfolio-grid bg-gray pb-90">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <h2 class="heading__subtitle">Sustainability!</h2>
+          </div><!-- /.col-lg-12 -->
+          <div class="col-sm-12 col-md-12 col-lg-5">
+            <h3 class="heading__title mb-40">Featured Projects</h3>
+          </div><!-- /.col-lg-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-7">
+            <ul class="portfolio-filter d-flex flex-wrap justify-content-center list-unstyled mb-0 mt-20">
+              <li><a class="filter active" href="#" data-filter="all">ALL Works</a></li>
+              <li><a class="filter" href="#" data-filter=".filter-building">Building</a></li>
+              <li><a class="filter" href="#" data-filter=".filter-interior">Interior</a></li>
+            </ul><!-- /.portfolio-filter  -->
+          </div><!-- /.col-lg-7 -->
+        </div><!-- /.row -->
+        <div id="filtered-items-wrap" class="row">
+          <!-- portfolio item #1 -->
+          <div class="col-sm-6 col-md-6 col-lg-4 mix filter-building">
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img src="assets/images/projects/project1.jpg" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio-item__hover">
+                <div class="portfolio-item__content">
+                  <h4 class="portfolio-item__title"><a>Balcony Railings</a></h4>
+                  <div class="portfolio-item__cat">
+                    <a>Building</a>
+                  </div><!-- /.portfolio-cat -->
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item__hover -->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #2 -->
+          <div class="col-sm-6 col-md-6 col-lg-4 mix filter-interior">
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img src="assets/images/projects/project2.jpg" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio-item__hover">
+                <div class="portfolio-item__content">
+                  <h4 class="portfolio-item__title"><a>Office Railings</a></h4>
+                  <div class="portfolio-item__cat">
+                    <a>Interior</a>
+                  </div><!-- /.portfolio-cat -->
+                </div><!-- /.portfolio-item__hover -->
+              </div><!-- /.portfolio-content -->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #3 -->
+          <div class="col-sm-6 col-md-6 col-lg-4 mix filter-building">
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img src="assets/images/projects/project3.jpg" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio-item__hover">
+                <div class="portfolio-item__content">
+                  <h4 class="portfolio-item__title"><a>Balcony Railings & Windows Glass</a></h4>
+                  <div class="portfolio-item__cat">
+                    <a>Building</a>
+                  </div><!-- /.portfolio-cat -->
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item__hover -->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #4 -->
+          <div class="col-sm-6 col-md-6 col-lg-4 mix filter-interior">
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img src="assets/images/projects/project4.jpg" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio-item__hover">
+                <div class="portfolio-item__content">
+                  <h4 class="portfolio-item__title"><a>Bathroom</a></h4>
+                  <div class="portfolio-item__cat">
+                    <a>Interior</a>
+                  </div><!-- /.portfolio-cat -->
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item__hover -->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #5 -->
+          <div class="col-sm-6 col-md-6 col-lg-4 mix filter-building">
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img src="assets/images/projects/project5.jpg" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio-item__hover">
+                <div class="portfolio-item__content">
+                  <h4 class="portfolio-item__title"><a>Balcony Railings</a></h4>
+                  <div class="portfolio-item__cat">
+                    <a>Building</a>
+                  </div><!-- /.portfolio-cat -->
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item__hover -->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- portfolio item #6 -->
+          <div class="col-sm-6 col-md-6 col-lg-4 mix filter-interior">
+            <div class="portfolio-item">
+              <div class="portfolio-item__img">
+                <img src="assets/images/projects/project6.jpg" alt="portfolio img">
+              </div><!-- /.portfolio-img -->
+              <div class="portfolio-item__hover">
+                <div class="portfolio-item__content">
+                  <h4 class="portfolio-item__title"><a>Stairs Railings</a></h4>
+                  <div class="portfolio-item__cat">
+                    <a>Interior</a>
+                  </div><!-- /.portfolio-cat -->
+                </div><!-- /.portfolio-content -->
+              </div><!-- /.portfolio-item__hover -->
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.portfolio grid -->
+
+    <!-- =========================== 
+      Features layout 1
+    ============================= -->
+    <section class="features-layout1 pb-80">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <div class="heading heading-layout3 mb-70">
+              <h3 class="heading__title">Pushing The Boundaries Of What’s Possible.</h3>
+            </div><!-- /.heading -->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row">
+          <!-- Feature Item #1 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <img src="assets/images/glass/1.png" alt="">
+              </div><!-- /.feature-item__icon -->
+              <h4 class="feature-item__title"><a href="standard-glass.html">Standard Glass</a></h4>
+              <p class="feature-item__desc">High-quality glass with applications in residential and commercial projects.
+              </p>
+              <a href="standard-glass.html" class="btn btn__secondary btn__link">
+                <i class="icon-arrow-right1"></i><span>Read More</span>
+              </a>
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- Feature Item #2 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <img src="assets/images/glass/2.png" alt="">
+              </div><!-- /.feature-item__icon -->
+              <h4 class="feature-item__title"><a href="noise-reduction.html">Noise Reduction</a></h4>
+              <p class="feature-item__desc">Engineered glass to minimize noise for more peaceful environments.</p>
+              <a href="noise-reduction.html" class="btn btn__secondary btn__link">
+                <i class="icon-arrow-right1"></i><span>Read More</span>
+              </a>
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- Feature Item #3 -->
+          <div class="col-sm-12 col-md-4 col-lg-4">
+            <div class="feature-item">
+              <div class="feature-item__icon">
+                <img src="assets/images/glass/3.png" alt="">
+              </div><!-- /.feature-item__icon -->
+              <h4 class="feature-item__title"><a href="fire-resistance.html">Fire Resistance</a></h4>
+              <p class="feature-item__desc">Durable glass that provides enhanced fire protection and safety in
+                buildings.</p>
+              <a href="fire-resistance.html" class="btn btn__secondary btn__link">
+                <i class="icon-arrow-right1"></i><span>Read More</span>
+              </a>
+            </div><!-- /.portfolio-item -->
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Features layout 1 -->
+
+    <!-- =========================
+       Banner layout 1
+      =========================== -->
+    <section class="banner-layout1 pb-100 bg-secondary">
+      <div class="container-fluid col-padding-0">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6 background-banner">
+            <div class="bg-img">
+              <img src="assets/images/banners/1.jpg" alt="banner">
+            </div>
+            <div class="cta-banner">
+              <h4 class="cta-banner__subtitle ">30+</h4>
+              <h5 class="cta-banner__title ">Years Of Experience!</h5>
+              <a href="#" class="btn btn__primary btn__link"><i class="icon-arrow-right1"></i></a>
+            </div><!-- /.cta-banner -->
+
+          </div><!-- /.col-xl-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div class="inner-padding py-0">
+              <div class="heading-layout2 heading-light mb-40">
+                <h3 class="heading__title">Technical Solutions.</h3>
+                <p class="heading__desc">With a commitment to excellence, innovation, and customer satisfaction, we
+                  deliver cutting-edge solutions that elevate the beauty, functionality, and safety of glass in various
+                  applications.
+                </p>
+              </div><!-- /.heading -->
+              <div class="d-flex flex-wrap justify-content-between fancybox-wrapper">
+                <!-- fancybox item #1 -->
+                <div class="fancybox-item">
+                  <div class="fancybox-item__icon">
+
+                    <img src="assets/images/solutions/laminated.png" alt="">
+                  </div><!-- /.fancybox-icon -->
+                  <div class="fancybox-item__content">
+                    <h4 class="fancybox-item__title">Glass Lamination</h4>
+                  </div><!-- /.fancybox-content -->
+                </div><!-- /.fancybox-item -->
+                <!-- fancybox item #2 -->
+                <div class="fancybox-item">
+                  <div class="fancybox-item__icon">
+                    <img src="assets/images/solutions/tempered.png" alt="">
+                  </div><!-- /.fancybox-icon -->
+                  <div class="fancybox-item__content">
+                    <h4 class="fancybox-item__title">Glass Tempering</h4>
+                  </div><!-- /.fancybox-content -->
+                </div><!-- /.col-lg-4 -->
+                <!-- fancybox item #3 -->
+                <div class="fancybox-item">
+                  <div class="fancybox-item__icon">
+                    <img src="assets/images/solutions/cnc.png" alt="">
+                  </div><!-- /.fancybox-icon -->
+                  <div class="fancybox-item__content">
+                    <h4 class="fancybox-item__title">CNC Smoothing</h4>
+                  </div><!-- /.fancybox-content -->
+                </div><!-- /.fancybox-item -->
+              </div><!-- /.row -->
+              <p class="color-white mb-20"> We offer innovative glass solutions meticulously designed to enhance safety,
+                security, and design versatility. Our glass options provide an extra layer of protection, making them
+                ideal for various applications without compromising on aesthetics.
+              </p>
+            </div>
+          </div><!-- /.col-xl-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Banner layout 1 -->
+
+    <div>
+      <div class="bg-img"><img src="assets/images/backgrounds/2.jpg" alt="background"></div>
+
+      <section class="contact-layout2 pt-62 pb-0">
+        <div class="container">
+          <div class="row contact-panel">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+              <form class="contact-panel__form" method="post" action="assets/php/contact.php" id="contactForm">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <h4 class="contact-panel__title">Get In Touch</h4>
+                    <p class="contact-panel__desc mb-40">Complete control over products allows us to ensure our
+                      customers receive the best quality prices and service. We take great pride in everything that we
+                      do in our factory.</p>
+                  </div>
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group"><input type="text" class="form-control" placeholder="Name" id="contact-name"
+                        name="contact-name" required></div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group"><input type="email" class="form-control" placeholder="Email"
+                        id="contact-email" name="contact-email" required></div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group"><input type="text" class="form-control" placeholder="Phone"
+                        id="contact-Phone" name="contact-phone" required></div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <select class="form-control">
+                        <option value="0">Select Your Service</option>
+                        <option value="1">Consulting</option>
+                        <option value="2">Offer</option>
+                      </select>
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                      <textarea class="form-control" placeholder="Comment..." id="contact-messgae"
+                        name="contact-messgae" required></textarea>
+                    </div>
+                  </div><!-- /.col-lg-12 -->
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <button type="submit" class="btn btn__secondary btn__block ">Submit Request </button>
+                    <div class="contact-result"></div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </form>
+            </div><!-- /.col-lg-8 -->
+            <div class="col-sm-12 col-md-12 col-lg-4">
+              <div class="contact-panel__info bg-secondary">
+                <h4 class="contact-panel__info__title">Contact Info</h4>
+                <div class="contact-panel__block">
+                  <h5 class="contact-panel__block__title">Our Location</h5>
+                  <ul class="contact-panel__block__list list-unstyled">
+                    <li>Rahovec - Kosovo</li>
+                  </ul>
+                </div><!-- /.contact-panel__info__block -->
+                <div class="contact-panel__block">
+                  <h5 class="contact-panel__block__title">Quick Contact</h5>
+                  <ul class="contact-panel__block__list list-unstyled">
+                    <li><a href="mailto:office@dinatglass.com"></a>Email: office@dinatglass.com</li>
+                    <li><a href="mailto:harundurguti@dinatglass.com"></a>Email: harundurguti@dinatglass.com</li>
+                    <li><a href="tel:01061245741"></a>Call Us: (383) 44 200 854</li>
+                  </ul>
+                </div><!-- /.contact-panel__info__block -->
+                <div class="contact-panel__block">
+                  <h5 class="contact-panel__block__title">Opening Hours</h5>
+                  <ul class="contact-panel__block__list list-unstyled">
+                    <li>Monday - Friday</li>
+                    <li>08:00 - 17:00 </li>
+                  </ul>
+                </div><!-- /.contact-panel__info__block -->
+                <h5 class="contact-panel__block__title">Do You Have Any Questions, Just Contact Us To Get Help!</h5>
+              
+                <a href="contacs.html" class="btn btn__primary btn__block">Contact Us</a>
+              </div><!-- /.contact-panel__info -->
+            </div><!-- /.col-lg-4 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </section><!-- /.contact layout 2 -->
+
+      <!-- =====================
+         Clients
+      ======================== -->
+      <section class="clients border-top">
+
+    </div>
+
+
+
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer">
+
+      <div class="footer-primary bg-primary">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-sm-2 col-md-2 col-lg-2 col-xl-2 footer-widget footer-widget__newsletter">
+              <img src="assets/images/logo/logo.png" alt="logo" class="mr-20">
+            </div><!-- /.col-xl-4 -->
+
+
+            <div class="col-sm-3 col-md-6 col-lg-3 col-xl-3 footer-widget">
+              <h6 class="footer-widget__title">Dina-T Glass</h6>
+              <div class="footer-widget__content">
+                <p class="mb-20">We lead the way in cutting-edge glass solutions, setting new industry standards in
+                  quality, innovation, and sustainability.</p>
+                <a href="contact-us.html" class="btn btn__primary btn__link btn__icon">
+                  <i class="icon-arrow-right1"></i><span>CONTACT</span>
+                </a>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 col-xl-2 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Links</h6>
+              <div class="footer-widget__content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="projects-grid.html">Our Projects</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="standard-glass.html">Services</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-12 col-md-6 col-lg-3 col-xl-3 footer-widget">
+              <h6 class="footer-widget__title">Quick Contact</h6>
+              <div class="footer-widget__content">
+                <p>Rahovec - Kosovo</p>
+                <p>If you have any questions or need help, feel free to contact with our team.</p>
+                <p class="footer-contact__phone d-flex align-items-center">
+                  <i class="icon-phone1"></i>
+                  <a href="tel:0025565454117">(383) 44 200 854</a>
+                </p>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-4 -->
+          </div><!-- /.row -->
+          <p class="mb-0" style="text-align: center;"> &copy; 2025 Dina-T Glass.
+          </p>
+        </div><!-- /.container -->
+      </div><!-- /.footer-primary -->
+
+
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+  </div><!-- /.wrapper -->
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
