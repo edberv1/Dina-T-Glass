@@ -1,10 +1,3 @@
-/*--------------------------
-    Project Name: Eteon
-    Version: 1.0
-    Author: 7oorof
-    Devloped by: Ahmed Abdallah (a.abdallah999@gmail.com)
-    Relase Date: Septemper 2020
----------------------------*/
 /*---------------------------
       Table of Contents
     --------------------
