@@ -238,6 +238,11 @@
 
 /* Mobile Phones and tablets */
 @include xs-screens {
+    .about-layout1 .about__img img{
+   display: none;
+    }
+
+
     .about-layout2 {
         .list-items {
             -ms-flex-direction: column;

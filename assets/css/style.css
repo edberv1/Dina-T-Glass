@@ -3497,6 +3497,7 @@ textarea.form-control {
   z-index: 3;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+
 }
 
 .slick-arrow:hover {
@@ -3641,6 +3642,7 @@ textarea.form-control {
   color: #51668a;
   border: 3px solid #51668a;
   background-color: #ffffff;
+
 }
 
 .slider .slick-arrow:hover {
@@ -3765,13 +3767,15 @@ textarea.form-control {
 /* Mobile Phones and tablets */
 @media (min-width: 320px) and (max-width: 767px) {
   .header-transparent + .slider {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
   .slider {
     overflow: hidden;
+    margin-bottom: -250px;
   }
   .slider .slide-item {
     padding: 100px 10px;
+    
   }
   .slider .slide-item {
     height: auto;
@@ -3804,16 +3808,20 @@ textarea.form-control {
   .slider .slide__subtitle {
     margin-bottom: 15px;
   }
+
   .slider .slide__title {
     font-size: 27px;
     line-height: 37px;
     margin-bottom: 10px;
   }
+
   .slider .btn {
     margin-bottom: 10px;
   }
-  .slider .slick-arrow {
-    display: none;
+
+  .slider .slick-arrow,
+  .slider .slick-dots {
+    display: none !important;
   }
 }
 
@@ -6225,6 +6233,7 @@ textarea.form-control {
   .widget-categories ul li a {
     font-size: 13px;
     padding: 10px;
+    padding-left: 54px ;
   }
   .widget-download .btn {
     height: 60px;
@@ -6240,6 +6249,15 @@ textarea.form-control {
 
 .about__img img {
   border-radius: 3px;
+}
+
+
+/* Mobile Phones and tablets */
+@media (min-width: 320px) and (max-width: 575px) {
+.about__img img {
+  display: none;
+}
+
 }
 
 .about-layout1 .about__img {
@@ -6467,6 +6485,7 @@ textarea.form-control {
   }
   .about-layout2 .cta-banner {
     padding: 20px;
+    display: none;
   }
 }
 
