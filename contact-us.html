@@ -20,6 +20,17 @@
     />
     <link rel="stylesheet" href="assets/css/libraries.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- EmailJS library -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+<script>
+  (function () {
+    emailjs.init("7g_uupO2WzCIPll6Q"); // ✅ Replace with your real public key if this changes
+  })();
+</script>
+
+
+
   </head>
 
   <body>
@@ -149,109 +160,50 @@
                   </div>
                 </div>
                 <!-- /.contact-panel__banner -->
-                <form
-                  class="contact-panel__form"
-                  method="post"
-                  action="assets/php/contact.php"
-                  id="contactForm"
-                >
-                  <div class="row">
-                    <div class="col-sm-12 col-md-12 col-lg-12">
-                      <form
-                        class="contact-panel__form"
-                        method="post"
-                        action="assets/php/contact.php"
-                        id="contactForm"
-                      >
-                        <div class="row">
-                          <div class="col-sm-12">
-                            <h4 class="contact-panel__title">Get In Touch</h4>
-                            <p class="contact-panel__desc mb-40">
-                              Complete control over products allows us to ensure
-                              our customers receive the best quality prices and
-                              service. We take great pride in everything that we
-                              do in our factory.
-                            </p>
-                          </div>
-                          <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="form-group">
-                              <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Name"
-                                id="contact-name"
-                                name="contact-name"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <!-- /.col-lg-6 -->
-                          <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="form-group">
-                              <input
-                                type="email"
-                                class="form-control"
-                                placeholder="Email"
-                                id="contact-email"
-                                name="contact-email"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <!-- /.col-lg-6 -->
-                          <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="form-group">
-                              <input
-                                type="text"
-                                class="form-control"
-                                placeholder="Phone"
-                                id="contact-Phone"
-                                name="contact-phone"
-                                required
-                              />
-                            </div>
-                          </div>
-                          <!-- /.col-lg-6 -->
-                          <div class="col-sm-6 col-md-6 col-lg-6">
-                            <div class="form-group">
-                              <select class="form-control">
-                                <option value="0">Select Your Service</option>
-                                <option value="1">Consulting</option>
-                                <option value="2">Offer</option>
-                              </select>
-                            </div>
-                          </div>
-                          <!-- /.col-lg-6 -->
-                          <div class="col-sm-12 col-md-12 col-lg-12">
-                            <div class="form-group">
-                              <textarea
-                                class="form-control"
-                                placeholder="Comment..."
-                                id="contact-messgae"
-                                name="contact-messgae"
-                                required
-                              ></textarea>
-                            </div>
-                          </div>
-                          <!-- /.col-lg-12 -->
-                          <div class="col-sm-12 col-md-12 col-lg-12">
-                            <button
-                              type="submit"
-                              class="btn btn__secondary btn__block"
-                            >
-                              Submit Request
-                            </button>
-                            <div class="contact-result"></div>
-                          </div>
-                          <!-- /.col-lg-12 -->
-                        </div>
-                        <!-- /.row -->
-                      </form>
-                    </div>
-                    <!-- /.col-lg-8 -->
-                  </div>
-                  <!-- /.row -->
-                </form>
+                <form class="contact-panel__form" id="contactForm">
+  <div class="row">
+    <div class="col-sm-12">
+      <h4 class="contact-panel__title">Get In Touch</h4>
+      <p class="contact-panel__desc mb-40">
+        Complete control over products allows us to ensure our customers receive the best quality prices and service.
+      </p>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Name" name="contact_name" required />
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="form-group">
+        <input type="email" class="form-control" placeholder="Email" name="contact_email" required />
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Phone" name="contact_phone" required />
+      </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
+      <div class="form-group">
+        <select class="form-control" name="service" required>
+          <option value="">Select Your Service</option>
+          <option value="Consulting">Consulting</option>
+          <option value="Offer">Offer</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <div class="form-group">
+        <textarea class="form-control" placeholder="Comment..." name="contact_message" required></textarea>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-12 col-lg-12">
+      <button type="submit" class="btn btn__secondary btn__block">Submit Request</button>
+      <div class="contact-result"></div>
+    </div>
+  </div>
+</form>
+
               </div>
               <!-- /.contact__panel -->
             </div>
@@ -405,4 +357,24 @@
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
+
+  <!-- Email sending logic -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const resultDiv = document.querySelector('.contact-result');
+
+    emailjs.sendForm('service_njr1duo', 'template_8xday3m', this)
+      .then(function (response) {
+        resultDiv.innerHTML = "<p style='color: green; margin-top: 15px;'>Message sent successfully!</p>";
+        document.getElementById("contactForm").reset();
+      }, function (error) {
+        console.error("FAILED...", error);
+        resultDiv.innerHTML = "<p style='color: red; margin-top: 15px;'>Failed to send message. Please try again.</p>";
+      });
+  });
+</script>
+
+
 </html>

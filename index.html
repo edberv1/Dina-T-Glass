@@ -689,16 +689,19 @@
   document.getElementById('contactForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
+    const resultDiv = document.querySelector('.contact-result');
+
     emailjs.sendForm('service_njr1duo', 'template_8xday3m', this)
       .then(function (response) {
-        alert("Message sent successfully!");
+        resultDiv.innerHTML = "<p style='color: green; margin-top: 15px;'>Message sent successfully!</p>";
         document.getElementById("contactForm").reset();
       }, function (error) {
         console.error("FAILED...", error);
-        alert("Failed to send message. Please try again.");
+        resultDiv.innerHTML = "<p style='color: red; margin-top: 15px;'>Failed to send message. Please try again.</p>";
       });
   });
 </script>
+
 
 
 </html>
